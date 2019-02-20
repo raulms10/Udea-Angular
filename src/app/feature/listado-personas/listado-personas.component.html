@@ -1,0 +1,41 @@
+
+<h4>NgFor</h4>
+<ul>
+    <li *ngFor ="let persona of personas; let i = index " >
+         {{persona.name}} - {{persona.age}}
+    </li>
+</ul>
+
+<h4>NgIf</h4>
+<ul *ngFor ="let persona of personas; let i = index ">
+    <li *ngIf="persona.age > 32"> {{persona.name}}</li>
+</ul>
+
+<h4>NgSwitch</h4>
+<ul *ngFor ="let persona of personas; let i = index "  [ngSwitch]="persona.country">
+    <li  *ngSwitchCase="'UK'" class="bg-red"> {{persona.name}}</li>
+    <li  *ngSwitchCase="'USA'" class="bg-blue"> {{persona.name}}</li>
+    <li  *ngSwitchCase="'HK'" class="bg-green"> {{persona.name}}</li>
+    <li  *ngSwitchDefault  class="bg-orange"> {{persona.name}}</li>
+</ul>
+
+<h4>NgStyle</h4>
+<ul *ngFor ="let persona of personas; let i = index ">
+    <li [ngStyle] = "{'color': getColor(persona.country)} "> {{persona.name}}</li>
+</ul>
+
+<h4>NgStyle Sintaxis 2</h4>
+<ul *ngFor ="let persona of personas; let i = index ">
+    <li [style.color] = "getColor(persona.country) "> {{persona.name}}</li>
+</ul>
+
+<h4>NgClass</h4>
+<ul *ngFor ="let persona of personas; let i = index ">
+    <li [ngClass] = "{
+      'bg-red' : persona.country ==='UK' ,
+      'bg-blue' : persona.country ==='USA' ,
+      'bg-green' : persona.country === 'HK'
+    } ">
+        {{persona.name}}
+    </li>
+</ul>

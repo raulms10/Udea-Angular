@@ -1,0 +1,24 @@
+<div class="example-container">
+  <h4>Curso Nuevo</h4>
+    <mat-form-field>
+      <input matInput [(ngModel)]="curso.nombre" placeholder="Nombre">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="curso.categoria" placeholder="Categoria">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="curso.fecha" [matDatepicker]="picker" placeholder="Fecha">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-slide-toggle [(ngModel)]="curso.certificado">Certificado!</mat-slide-toggle>
+    <mat-slide-toggle [(ngModel)]="curso.finalizado">Finalizado!</mat-slide-toggle>
+    <mat-form-field>
+        <input matInput [(ngModel)]="curso.nota" type="number" placeholder="Nota">
+    </mat-form-field>
+  </div>
+  
+  <button mat-button color="primary" (click)="crearCurso()">Crear curso</button>
+  <button mat-button color="primary" (click)="goToCursos()">Cancelar</button>
+  <!--app-primary></app-primary-->
+  <app-exportable></app-exportable>

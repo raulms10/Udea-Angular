@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" >
+  <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+  </button>
+  <span>Angular UdeA</span>
+
+  <mat-menu #menu="matMenu">
+      <button [routerLink]="['/cursos']"  mat-menu-item>
+          <mat-icon>apps</mat-icon>
+          Cursos
+      </button>
+      <button mat-menu-item>
+          <mat-icon>local_phone</mat-icon>
+          Contactenos
+      </button>
+    </mat-menu>
+</mat-toolbar>

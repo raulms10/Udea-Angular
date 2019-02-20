@@ -1,0 +1,13 @@
+.card-block{
+  background: slategray;
+  border-radius: 5px;
+}
+.card-title {
+  color: black;
+}
+
+.card-text {
+  background: orange;
+  color: black;
+  border-radius: 2px;
+}

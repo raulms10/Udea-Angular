@@ -1,0 +1,22 @@
+<div class="card-block" *ngFor="let tarjeta of tarjetas">
+    <h2 class="card-title">{{tarjeta.titulo }}</h2>
+    <p class="card-text">
+        {{tarjeta.contenido}}
+    </p>
+</div>
+
+
+<div class="card-block" *ngFor="let tarjeta of tarjetas" appCambiarFondo>
+    <h2 class="card-title">{{tarjeta.titulo }}</h2>
+    <p class="card-text">
+        {{tarjeta.contenido}}
+    </p>
+</div>
+
+<div appCambiarFondo>
+    <h4 > Titulo </h4>
+    <p class="card-text">texto</p>
+  </div>
+
+Id: {{id}}
+Nombre: {{nombre}}
